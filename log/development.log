@@ -1,0 +1,15 @@
+DEPRECATION WARNING: You didn't set config.secret_key_base. Read the upgrade documentation to learn more about this new config option. (called from service at /home/yasmine/.rvm/rubies/ruby-2.0.0-p247/lib/ruby/2.0.0/webrick/httpserver.rb:138)
+
+
+Started GET "/prototypes/home" for 127.0.0.1 at 2014-01-07 20:29:12 +0200
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendered prototypes/home.html.erb (2.8ms)
+Completed 200 OK in 69ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/prototypes/home" for 127.0.0.1 at 2014-01-07 20:29:19 +0200
+Processing by PrototypesController#show as HTML
+  Parameters: {"id"=>"home"}
+  Rendered prototypes/home.html.erb (0.5ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)

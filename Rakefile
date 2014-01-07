@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Mapleleaf2::Application.load_tasks
+Mapleleaf::Application.load_tasks
