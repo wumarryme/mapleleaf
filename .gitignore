@@ -12,8 +12,8 @@
 /db/*.sqlite3-journal
 /public/uploads
 # Ignore all logfiles and tempfiles.
+/log
 /log/*.log
-/log/generate_report_error.csv
 /tmp
 coverage
 #config/initializers/survey.rb
