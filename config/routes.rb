@@ -3,6 +3,12 @@ Mapleleaf::Application.routes.draw do
   devise_for :users
   resources :prototypes, :only=>:show
   
+  match '/home' => 'pages#home', :via => :get
+  match '/about' => 'pages#about', :via => :get
+  match '/privacy' => 'pages#privacy', :via => :get, :as => :privacy
+  match '/contact_us' => 'pages#contact_us', :via => :get, :as => :contact_us
+  # root 'pages#home'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -52,7 +58,7 @@ Mapleleaf::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => "welcome#index"
+  root :to => "pages#home"
 
   # See how all your routes lay out with "rake routes"
 

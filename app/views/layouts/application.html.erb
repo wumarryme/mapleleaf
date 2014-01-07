@@ -1,32 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mapleleaf</title>
+  <title><%= "#{@title} - Maple Leaf" %></title>
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
 <body>
-  <div class="header">
-      <% if user_or_current_user %>
-      <div class="logout-link">
-        <%= link_to I18n.t('logout'), destroy_user_session_path, method: :delete, class: "logout"%>
-      </div>
-      <div class="user">
-        <span class="username"><%= current_user.name %></span>
-      </div>
-      <% else %>
-      <div class="user">
-        <%= link_to I18n.t('sign_in'), new_user_session_path, class: "logout"%>
-      </div>
-      <% end %>
+  <%= render "layouts/header" %>
 
-  </div>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-
-
   <%= yield %>
 
+  <%= render "layouts/footer" %>
 </body>
 </html>
